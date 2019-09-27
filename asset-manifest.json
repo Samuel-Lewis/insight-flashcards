@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/insight-flashcards/static/js/main.1bc85aa3.chunk.js",
+    "main.js.map": "/insight-flashcards/static/js/main.1bc85aa3.chunk.js.map",
+    "runtime-main.js": "/insight-flashcards/static/js/runtime-main.50cbb17c.js",
+    "runtime-main.js.map": "/insight-flashcards/static/js/runtime-main.50cbb17c.js.map",
+    "static/js/2.ebcda206.chunk.js": "/insight-flashcards/static/js/2.ebcda206.chunk.js",
+    "static/js/2.ebcda206.chunk.js.map": "/insight-flashcards/static/js/2.ebcda206.chunk.js.map",
+    "index.html": "/insight-flashcards/index.html",
+    "precache-manifest.d49c0aa76dcca691f3e1a554d0bc780c.js": "/insight-flashcards/precache-manifest.d49c0aa76dcca691f3e1a554d0bc780c.js",
+    "service-worker.js": "/insight-flashcards/service-worker.js"
+  }
+}
