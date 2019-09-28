@@ -1,13 +1,13 @@
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
 import Container from 'react-bootstrap/Container';
+import { Deck } from './Deck';
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 
-type CardType = JSX.Element;
 type AppProps = {};
 type AppState = {
-  cards: CardType[];
+  decks: any[];
 };
 
 const dataFiles = ['animals', 'clothes', 'food'];
@@ -15,34 +15,16 @@ const dataFiles = ['animals', 'clothes', 'food'];
 class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
-    this.state = {
-      cards: []
-    };
+    const decks = dataFiles.map(file => <Deck key={file} title={file} />);
 
-    dataFiles.map((listName: string) =>
-      fetch(`./data/${listName}.csv`)
-        .then(r => r.text())
-        .then(d => d.split('\n').map(line => line.trim().split(';')))
-        .then(d => d.filter(phrase => phrase.length === 2))
-        .then(d => this.cardify(listName, d.length))
-    );
+    this.state = {
+      decks
+    };
   }
 
-  cardify = (listName: string, wordCount: number): void => {
-    const newCard = (
-      <Card key={listName} style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title>
-            <h5>{listName}</h5>
-          </Card.Title>
-          <Card.Subtitle>
-            {wordCount} phrase{wordCount > 1 ? 's' : ''}
-          </Card.Subtitle>
-        </Card.Body>
-      </Card>
-    );
-    this.setState({ cards: [...this.state.cards, newCard] });
-  };
+  start() {
+    console.log('leezzgooo');
+  }
 
   render(): JSX.Element {
     return (
@@ -50,9 +32,11 @@ class App extends React.Component<AppProps, AppState> {
         <Row className="col-xl">
           <h1>Insight</h1>
         </Row>
-        <Row className="col-xl">{this.state.cards}</Row>
         <Row className="col-xl">
-          <Button>Lets go</Button>
+          <CardDeck>{this.state.decks}</CardDeck>
+        </Row>
+        <Row className="col-xl">
+          <Button onClick={this.start}>Lets go</Button>
         </Row>
       </Container>
     );
