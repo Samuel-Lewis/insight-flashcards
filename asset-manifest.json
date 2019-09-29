@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/InsightFlashcards/static/js/main.d43d617c.chunk.js",
-    "main.js.map": "/InsightFlashcards/static/js/main.d43d617c.chunk.js.map",
+    "main.js": "/InsightFlashcards/static/js/main.648e5903.chunk.js",
+    "main.js.map": "/InsightFlashcards/static/js/main.648e5903.chunk.js.map",
     "runtime-main.js": "/InsightFlashcards/static/js/runtime-main.bd5fa885.js",
     "runtime-main.js.map": "/InsightFlashcards/static/js/runtime-main.bd5fa885.js.map",
-    "static/js/2.f18c1f09.chunk.js": "/InsightFlashcards/static/js/2.f18c1f09.chunk.js",
-    "static/js/2.f18c1f09.chunk.js.map": "/InsightFlashcards/static/js/2.f18c1f09.chunk.js.map",
+    "static/js/2.7582862b.chunk.js": "/InsightFlashcards/static/js/2.7582862b.chunk.js",
+    "static/js/2.7582862b.chunk.js.map": "/InsightFlashcards/static/js/2.7582862b.chunk.js.map",
     "index.html": "/InsightFlashcards/index.html",
-    "precache-manifest.e1acc563150bfeb28fdff59f31b001cd.js": "/InsightFlashcards/precache-manifest.e1acc563150bfeb28fdff59f31b001cd.js",
+    "precache-manifest.3cd65ccecf24b1dd1a66468ec9a531dc.js": "/InsightFlashcards/precache-manifest.3cd65ccecf24b1dd1a66468ec9a531dc.js",
     "service-worker.js": "/InsightFlashcards/service-worker.js"
   }
 }
