@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b81ce2418282b09e58ffc5759ec01b9",
+    "revision": "09e181657c21dd8c7a6fa70ad5c17d25",
     "url": "/InsightFlashcards/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/InsightFlashcards/static/js/2.7582862b.chunk.js"
   },
   {
-    "revision": "62a6a3b59cf7deeb3874",
-    "url": "/InsightFlashcards/static/js/main.648e5903.chunk.js"
+    "revision": "f0b1bf09456e8e309758",
+    "url": "/InsightFlashcards/static/js/main.4c1eabcf.chunk.js"
   },
   {
     "revision": "179d9848bfefc9de3e9e",
