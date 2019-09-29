@@ -13,6 +13,12 @@ type DeckState = {
   wordCount?: number;
 };
 
+export const loadDeck = (deckName: string): Promise<string[][]> =>
+  fetch(`./data/${deckName}.csv`)
+    .then(r => r.text())
+    .then(d => d.split('\n').map(line => line.trim().split(';')))
+    .then(d => d.filter(phrase => phrase.length === 2));
+
 export class Deck extends React.Component<DeckProps, DeckState> {
   constructor(props: DeckProps) {
     super(props);
@@ -20,21 +26,15 @@ export class Deck extends React.Component<DeckProps, DeckState> {
       loading: true,
       selected: false
     };
-
-    this.loadDeck();
   }
 
-  loadDeck(): void {
-    fetch(`./data/${this.props.title}.csv`)
-      .then(r => r.text())
-      .then(d => d.split('\n').map(line => line.trim().split(';')))
-      .then(d => d.filter(phrase => phrase.length === 2))
-      .then(d =>
-        this.setState({
-          loading: false,
-          wordCount: d.length
-        })
-      );
+  componentDidMount(): void {
+    loadDeck(this.props.title).then(d =>
+      this.setState({
+        loading: false,
+        wordCount: d.length
+      })
+    );
   }
 
   toggleSelection = (): void => {
