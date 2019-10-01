@@ -3,6 +3,7 @@ import { Redirect, RouteComponentProps } from 'react-router';
 import Col from 'react-bootstrap/Col';
 import React from 'react';
 import Row from 'react-bootstrap/Row';
+import Spinner from 'react-bootstrap/Spinner';
 import { loadDeck } from './Deck';
 import qs from 'query-string';
 
@@ -11,6 +12,7 @@ type ViewerState = {
   deckNames: string[];
   redirect: boolean;
   words: string;
+  loading: boolean;
 };
 
 class Viewer extends React.Component<ViewerProps, ViewerState> {
@@ -24,7 +26,8 @@ class Viewer extends React.Component<ViewerProps, ViewerState> {
     this.state = {
       deckNames: typeof deckNames === 'string' ? [deckNames] : deckNames,
       redirect: false,
-      words: ''
+      words: '',
+      loading: true
     };
   }
 
@@ -37,11 +40,19 @@ class Viewer extends React.Component<ViewerProps, ViewerState> {
 
     const loads = deckNames.map(loadDeck);
     Promise.all(loads).then(data =>
-      this.setState({ words: JSON.stringify(data) })
+      this.setState({ words: JSON.stringify(data), loading: false })
     );
   }
 
   render(): JSX.Element {
+    if (this.state.loading) {
+      return (
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      );
+    }
+
     if (this.state.redirect) {
       return <Redirect to="/" />;
     }

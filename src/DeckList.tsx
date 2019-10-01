@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import CardDeck from 'react-bootstrap/CardDeck';
+import CardColumns from 'react-bootstrap/CardColumns';
 import Col from 'react-bootstrap/Col';
 import { Deck } from './Deck';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -12,7 +12,7 @@ type DeckListState = {
   selectedDecks: Set<string>;
 };
 
-const dataFiles = ['animals', 'clothes', 'food'];
+const dataFiles = ['animals', 'basics', 'food', 'phrases-vocab', 'phrases'];
 
 class DeckList extends React.Component<DeckListProps, DeckListState> {
   constructor(props: DeckListProps) {
@@ -50,7 +50,7 @@ class DeckList extends React.Component<DeckListProps, DeckListState> {
         </Row>
         <Row>
           <Col>
-            <CardDeck>{this.state.decks}</CardDeck>
+            <CardColumns>{this.state.decks}</CardColumns>
           </Col>
         </Row>
         <Row>
