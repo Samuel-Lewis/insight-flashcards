@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/InsightFlashcards/static/js/main.12e97f27.chunk.js",
-    "main.js.map": "/InsightFlashcards/static/js/main.12e97f27.chunk.js.map",
+    "main.js": "/InsightFlashcards/static/js/main.166825e2.chunk.js",
+    "main.js.map": "/InsightFlashcards/static/js/main.166825e2.chunk.js.map",
     "runtime-main.js": "/InsightFlashcards/static/js/runtime-main.bd5fa885.js",
     "runtime-main.js.map": "/InsightFlashcards/static/js/runtime-main.bd5fa885.js.map",
     "static/js/2.98343de2.chunk.js": "/InsightFlashcards/static/js/2.98343de2.chunk.js",
     "static/js/2.98343de2.chunk.js.map": "/InsightFlashcards/static/js/2.98343de2.chunk.js.map",
     "index.html": "/InsightFlashcards/index.html",
-    "precache-manifest.b49b1edd03745e4f8e955dacb3e02f84.js": "/InsightFlashcards/precache-manifest.b49b1edd03745e4f8e955dacb3e02f84.js",
+    "precache-manifest.dd31335944a18ebf1bce3faf4c66cce3.js": "/InsightFlashcards/precache-manifest.dd31335944a18ebf1bce3faf4c66cce3.js",
     "service-worker.js": "/InsightFlashcards/service-worker.js"
   }
 }
