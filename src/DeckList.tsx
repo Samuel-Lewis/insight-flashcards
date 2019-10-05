@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import { Deck } from './Deck';
 import { LinkContainer } from 'react-router-bootstrap';
 import React from 'react';
@@ -42,7 +43,7 @@ class DeckList extends React.Component<DeckListProps, DeckListState> {
 
   render(): JSX.Element {
     return (
-      <>
+      <Container>
         <Row>
           <Col>
             <h1>Insight</h1>
@@ -64,7 +65,7 @@ class DeckList extends React.Component<DeckListProps, DeckListState> {
             </LinkContainer>
           </Col>
         </Row>
-      </>
+      </Container>
     );
   }
 }
