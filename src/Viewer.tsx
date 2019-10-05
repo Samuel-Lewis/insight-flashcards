@@ -71,7 +71,7 @@ class Viewer extends React.Component<ViewerProps, ViewerState> {
     }
 
     body = (
-      <Carousel slide={false} interval={0}>
+      <Carousel slide={false} interval={0} keyboard={true}>
         {this.state.words.map(word => (
           <Carousel.Item key={`${word[0]}-${word[1]}`}>
             <FlippableCard sides={word} />

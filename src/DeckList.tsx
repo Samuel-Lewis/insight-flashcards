@@ -13,7 +13,33 @@ type DeckListState = {
   selectedDecks: Set<string>;
 };
 
-const dataFiles = ['animals', 'basics', 'food', 'phrases-vocab', 'phrases'];
+const dataFiles = [
+  'adjectives',
+  'families',
+  'prepositions',
+  'animals',
+  'food',
+  'present',
+  'basics',
+  'infinitives',
+  'pronouns',
+  'clothing',
+  'location',
+  'qualities',
+  'colours',
+  'numbers',
+  'that-those',
+  'dates',
+  'phrases-vocab',
+  'time',
+  'definite-plurals',
+  'phrases',
+  'work',
+  'definites',
+  'plurals',
+  'direction',
+  'possesive'
+];
 
 class DeckList extends React.Component<DeckListProps, DeckListState> {
   constructor(props: DeckListProps) {
@@ -21,7 +47,11 @@ class DeckList extends React.Component<DeckListProps, DeckListState> {
     const decks = dataFiles
       .sort()
       .map(file => (
-        <Deck key={file} title={file} onChange={this.deckChanged} />
+        <Deck
+          key={file}
+          title={file.replace('-', ' ')}
+          onChange={this.deckChanged}
+        />
       ));
 
     this.state = {
@@ -55,13 +85,15 @@ class DeckList extends React.Component<DeckListProps, DeckListState> {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="fixed-bottom">
             <LinkContainer
               to={
                 '/view?decks=' + Array.from(this.state.selectedDecks).join(',')
               }
             >
-              <Button>Start!</Button>
+              <Button variant="primary" size="lg" block>
+                Start!
+              </Button>
             </LinkContainer>
           </Col>
         </Row>
