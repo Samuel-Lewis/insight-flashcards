@@ -2,7 +2,7 @@
   "name": "insight",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://samuel-lewis.github.io/InsightFlashcards/",
+  "homepage": "https://samuel-lewis.com/insight-flashcards/",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.5",
